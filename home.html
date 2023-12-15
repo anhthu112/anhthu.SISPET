@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>SisPet</title>
+<link rel="shortcut icon" type="image/png" href="/assets/img/logo.png"/>
+
+</head>
+<body>
+    <div class="header">
+        <div class="menu">
+            <img class="logo" src="/assets/img/logo.png" alt="">
+            <ul>
+                    <li><a href="" style="color:#007082;">Trang chủ</a></li>
+                    <li><a href="">Dịch vụ</a>
+                        <ul class="submenu">
+                            <li><a href="service.html">Khám, chích ngừa</a></li>
+                            <li><a href="service.html">Spa, grooming</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Đặt lịch</a></li>
+                    <li><a href="">Tin tức</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+            <div class="user" onclick=clickUser()>
+                <img class="user-img" src="/assets/img/user.jpg" alt="">
+                <ul class="user-subnav">
+                    <li><a href="accout.html"><i class="far fa-user"></i>Tài khoản</a></li>
+                    <li><a href="pet.html"><i class="fas fa-paw"></i>Hồ sơ thú cưng</a></li>
+                    <li><a href="login.html"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="header-slg">
+            <img src="/assets/img/Group 17.png" alt="">
+            <h1>Chăm sóc<br><span>thú cưng</span> Sispet</h1>
+            <p>Chúng tôi tin rằng dịch vụ của chúng tôi chuyên nghiệp và đáng tin cậy đối với khách hàng, vì vậy đừng lo lắng. Hãy để việc chăm sóc thú cưng cho chúng tôi.</p>
+            <button id="book-btn">Đặt ngay</button>
+            <div class="experts">
+                <h3>Chuyên gia chăm sóc của chúng tôi</h3>
+                <div class="expert-img">
+                    <img src="/assets/img/ep1.png" alt="">
+                    <img src="/assets/img/ep2.png" alt="">
+                    <img src="/assets/img/ep3.png" alt="">
+                    <img src="/assets/img/ep4.png" alt="">
+
+                </div>
+            </div>
+        </div>
+        <img class="pet dog" src="/assets/img/Rectangle 25.png" alt="">
+        <img class="pet cat" src="/assets/img/Rectangle 27.png" alt="">
+        <img class="footpr" src="/assets/img/footprint.png" alt="">
+        <div class="header-bg">
+            <img src="/assets/img/Union.png" alt="">
+        </div>
+    </div>
+    <div class="content">
+        <div class="pet-list">
+            <div class="pet-list-title title">
+                <h4>Tạo kiểu với nhiều phong cách đa dạng tại SisPet
+                <img src="/assets/img/footprint1.png" alt=""></h4>
+            </div>
+            <div class="slideshow-container">
+                <div class="mySlides">
+                  <img src="/assets/img/slide1.png">
+                  <img src="/assets/img/slide2.png">
+                  <img src="/assets/img/slide3.png">
+                </div>
+                <div class="mySlides">
+                  <img src="/assets/img/slide4.png">
+                  <img src="/assets/img/slide5.jpg">
+                  <img src="/assets/img/slide6.jpg">
+                </div>
+                <div class="mySlides">
+                  <img src="/assets/img/slide7.jpg">
+                  <img src="/assets/img/slide8.png">
+                  <img src="/assets/img/slide9.png">
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>     
+        </div>
+        <div class="slogan">
+            <h2><span>Thú cưng</span> của bạn sẽ được chăm sóc tốt nhất<br>mọi lúc tại <span>trung tâm chăm sóc thú cưng của chúng tôi.</span></h2>
+            <div class="slogan-img">
+                <img src="/assets/img/Ellipse 15.png" alt="">
+                <img id="cat" src="/assets/img/cat.png" alt="">
+            </div>
+        </div>
+        <div class="best-service">
+            <div class="best-service-title title">
+                <h4>Những dịch vụ được ưa thích nhất
+                <img src="/assets/img/footprint1.png" alt="">
+                </h4>
+                <a href=""><span>Xem thêm ></span></a>
+            </div>
+            <div class="best-service-list">
+                <div class="best-service-list">
+                    <div class="service">
+                        <img src="/assets/img/sv1.png" alt="Lights" style="width:100%">
+                        <h4>Khám tổng quát, tiêm chích, ...</h4>
+                        <p>Đội ngũ y bác sĩ chuyên nghiệp, lịch trình linh hoạt, dịch vụ tiêm chích đa dạng, môi trường đa dạng, thân thiện, tư vấn y tế.</p>
+                    </div>
+                    <div class="service">
+                        <img src="/assets/img/sv1.png" alt="Lights" style="width:100%">
+                        <h4>Khám tổng quát, tiêm chích, ...</h4>
+                        <p>Đội ngũ y bác sĩ chuyên nghiệp, lịch trình linh hoạt, dịch vụ tiêm chích đa dạng, môi trường đa dạng, thân thiện, tư vấn y tế.</p>
+                    </div>
+                    <div class="service">
+                        <img src="/assets/img/sv1.png" alt="Lights" style="width:100%">
+                        <h4>Khám tổng quát, tiêm chích, ...</h4>
+                        <p>Đội ngũ y bác sĩ chuyên nghiệp, lịch trình linh hoạt, dịch vụ tiêm chích đa dạng, môi trường đa dạng, thân thiện, tư vấn y tế.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slogan-bottom">
+            <h3><span>Thú cưng</span> của bạn sẽ được chăm sóc tốt nhất<br>mọi lúc tại <span>trung tâm chăm sóc thú cưng của chúng tôi.</span></h3>
+            <div class="slogan-bottom-img">
+                <img class="ellipse"src="/assets/img/Ellipse 15.png" alt="">
+                <img id="pet" src="/assets/img/pet.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="about">
+            <h2>SisPet</h2>
+            <h3>Về chúng tôi</h3>
+            <p>Chúng tôi luôn cố gắng hoàn thiện và phát triển<br>hơn mỗi ngày để mang đến sự phục vụ tốt nhất cho khách hàng.</p>
+            <ul class="about-link">
+                <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-google"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-menu">
+            <ul>
+                <li class="menu-title">Dịch vụ</li>
+                <a href=""><li>Đặt lịch khám</li></a>
+                <a href=""><li>Vệ sinh thú cưng</li></a>
+                <a href=""><li>Tạo kiểu thú cưng</li></a>
+            </ul>
+            <ul>
+                <li class="menu-title">Hỗ trợ</li>
+                <a href="">
+                    <li>Hỗ trợ khách</li>
+                </a>
+                <a href="">
+                    <li>Chính sách bảo mật</li>
+                </a>
+            </ul>
+            <ul>
+                <li class="menu-title">Liên hệ</li>
+                <li>Hotline: 0123 456 789</li>
+                <li>Email: SisPet@gmail.com</li>
+                <li>Copyright © 2023 SisPet </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }  
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          
+            slides[slideIndex-1].style.display = "flex";  
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.transform = "translateX(" + ((i - slideIndex + 1) * 100) + "%)";
+        }
+            }
+        function clickUser(){
+            var user=document.querySelector('.user')
+            var userSubnav=user.querySelector('ul')
+            if (userSubnav.style.display === "none") {
+                userSubnav.style.display = "block";
+            } else {
+                userSubnav.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

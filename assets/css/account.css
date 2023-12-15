@@ -1,0 +1,17 @@
+.content{
+    margin:100px 60px 60px 60px;
+}
+input[type="radio"]{
+    opacity: 1;
+    position: relative;
+}
+.radio-button:checked {
+    color: red;
+  }
+  .radio-button{
+    margin-right:10px;
+  }
+.gender{
+    display: inline-flex;
+}
+#

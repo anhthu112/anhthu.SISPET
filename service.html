@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/css/service.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<link rel="shortcut icon" type="image/png" href="/assets/img/logo.png"/>
+
+    <title>Đặt lịch | SisPet</title>
+</head>
+<body>
+    <div class="header">
+        <div class="menu">
+            <img class="logo" src="/assets/img/logo.png" alt="">
+            <ul>
+                    <li><a href="home.html">Trang chủ</a></li>
+                    <li><a href="" style="color:#007082;">Dịch vụ</a>
+                        <ul class="submenu">
+                            <li><a href="">Khám, chích ngừa</a></li>
+                            <li><a href="">Spa, grooming</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Đặt lịch</a></li>
+                    <li><a href="">Tin tức</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+            <div class="user" onclick="clickUser()">
+                <img src="/assets/img/user.jpg" alt="">
+                <ul class="user-subnav">
+                    <li><a href="accout.html"><i class="far fa-user"></i>Tài khoản</a></li>
+                    <li><a href="pet.html"><i class="fas fa-paw"></i>Hồ sơ thú cưng</a></li>
+                    <li><a href="login.html"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    <div class="content">
+        <div class="content-title">
+            <h1>Đăng ký dịch vụ</h1>
+            <div class="line">
+                <i class="fas fa-paw"></i>
+            </div>
+        </div>
+        <form id="register-service" onsubmit="return bookAppointment()">
+            <div class="register-form">
+                <h1>THÔNG TIN CỦA THÚ CƯNG</h1>
+                <div class="pet-infor">
+                    <ul>
+                        <li>
+                            <label for="petname">Tên thú cưng:</label>
+                            <input type="text" name="petname" placeholder="Nhập tên thú cưng..." required>
+                        </li>
+                        <li>
+                            <label for="petspecies">Thú cưng là:</label>
+                            <input type="text" name="petspecies" placeholder="Nhập chó/mèo..." required>
+                        </li>
+                        <li>
+                            <label for="petgender">Giới tính:</label>
+                            <input type="text" name="petgender" placeholder="Nhập đực/cái..." required>
+                        </li>
+                        <li>
+                            <label for="petweight">Cân nặng:</label>
+                            <input type="text" name="petweight" placeholder="Nhập cân nặng..." required>
+                        </li>
+                    </ul>
+                </div>
+                <div class="choose-servive">
+                    <label for="service">Dịch vụ đã chọn:</label>
+                    <div class="radio-list-service">
+                    <label class="service">
+                        <input type="radio" name="service" value="Sliver" onclick="updatePrice(this.value)">Silver
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="service">
+                        <input type="radio" name="service" value="Gold" onclick="updatePrice(this.value)">Gold
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="service">
+                        <input type="radio" name="service" value="Pro" onclick="updatePrice(this.value)">VIP
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="service">
+                        <input type="radio" name="service" value="Vipro" onclick="updatePrice(this.value)">VIP PRO
+                        <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="price-list">
+                    <img src="/assets/img/pl.png" alt="">
+                </div>
+                <h5>Tổng tiền sử dụng dịch vụ của bạn là: <span id="price"></span></h5>
+            </div>
+            <div class="register-form tao">
+                <h1>THỜI GIAN ĐẶT HẸN</h1>
+                <div class="time">
+                  <div class="label">
+                    <label for="date">Ngày/Tháng/Năm:</label>
+                    <label for="time">Thời gian:</label>
+                </div>
+                <div class="input">
+                    <input type="date" id="date" required>
+                    <input type="time" id="time" required>
+                </div>  
+                </div>
+                
+            </div>
+            <div class="register-form tao">
+                <h1>THÔNG TIN CUẢ CHỦ</h1>
+                <div class="owner">
+                    <div class="label">
+                    <label for="ownername">Họ và tên:</label>
+                    <label for="phone">Số điện thoại:</label>
+                    <label for="email">Email:</label>
+                </div>
+                <div class="input">
+                    <input type="text" name="ownername" placeholder="" value="TRẦN MY" required>
+                    <input type="text" name="phone" value="0123456789" required>
+                    <input type="text" name="email" value="Tranmy@gmail.com" required>
+                </div>
+                </div>
+        </div>
+        <h3 class="confirm">Hãy xem kỹ các thông tin bạn đã đặt, chúng tôi sẽ liên hệ với bạn qua Email để xác nhận lại các thông tin đã đặt. <br>Cảm ơn bạn đã tin tưởng và lựa chọn SisPet !</h3>
+        <input type="submit" value="ĐẶT LỊCH">
+        </form>
+        <div class="modal">
+
+        </div>
+    </div>
+        <div class="footer">
+        <div class="about">
+            <h2>SisPet</h2>
+            <h3>Về chúng tôi</h3>
+            <p>Chúng tôi luôn cố gắng hoàn thiện và phát triển<br>hơn mỗi ngày để mang đến sự phục vụ tốt nhất cho khách hàng.</p>
+            <ul class="about-link">
+                <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-google"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-menu">
+            <ul>
+                <li class="menu-title">Dịch vụ</li>
+                <a href=""><li>Đặt lịch khám</li></a>
+                <a href=""><li>Vệ sinh thú cưng</li></a>
+                <a href=""><li>Tạo kiểu thú cưng</li></a>
+            </ul>
+            <ul>
+                <li class="menu-title">Hỗ trợ</li>
+                <a href="">
+                    <li>Hỗ trợ khách</li>
+                </a>
+                <a href="">
+                    <li>Chính sách bảo mật</li>
+                </a>
+            </ul>
+            <ul>
+                <li class="menu-title">Liên hệ</li>
+                <li>Hotline: 0123 456 789</li>
+                <li>Email: SisPet@gmail.com</li>
+                <li>Copyright © 2023 SisPet </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+function updatePrice(value) {
+    var heading = document.getElementById("price");
+    var price; // Declare the price variable
+
+    if (value === "Sliver") {
+        price = "99.000đ";
+    }
+    if (value === "Gold") {
+        price = "129.000đ";
+    }
+    if (value === "Pro") {
+        price = "149.000đ";
+    }
+    if (value === "Vipro") {
+        price = "169.000đ";
+    }
+
+    console.log(value);
+    console.log(price);
+    heading.textContent = price;
+}
+
+    </script>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              
+              slides[slideIndex-1].style.display = "flex";  
+              for (i = 0; i < slides.length; i++) {
+            slides[i].style.transform = "translateX(" + ((i - slideIndex + 1) * 100) + "%)";
+                }
+            }
+            function clickUser(){
+            var user=document.querySelector('.user')
+            var userSubnav=user.querySelector('ul')
+            if (userSubnav.style.display === "none") {
+                userSubnav.style.display = "block";
+            } else {
+                userSubnav.style.display = "none";
+            }
+            }
+            </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
